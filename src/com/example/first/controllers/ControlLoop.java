@@ -19,19 +19,14 @@ public class ControlLoop {
         String firstName = scanner.nextLine();
         System.out.println("Podaj Nazwisko");
         String lastName = scanner.nextLine();
-        if (firstName.length() < 2 || lastName.length() < 2 || firstName == null || lastName == null) {
-            throw new NameUndefinedException();
-        }
         System.out.println("Podaj wiek");
         int age = scanner.nextInt();
         scanner.nextLine();
-        if (age < 1) {
-            throw new IncorrectAgeException();
-        }
         System.out.println("Podaj pesel");
         String pesel = scanner.nextLine();
         scanner.close();
-        return new Person(firstName, lastName, age, pesel);
+        Person person = new Person(firstName, lastName, age, pesel);
+        return person;
     }
 
 }

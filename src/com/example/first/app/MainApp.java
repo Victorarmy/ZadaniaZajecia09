@@ -9,8 +9,6 @@ import java.util.InputMismatchException;
 
 public class MainApp {
     public static void main(String[] args) {
-        Person person = new Person("Jan", "Kowalski", 34, "123412325434");
-        System.out.println(person);
         ControlLoop controlLoop = new ControlLoop();
         try {
             System.out.println(controlLoop.getUserInputs());
